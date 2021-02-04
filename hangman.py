@@ -37,7 +37,11 @@ while playgame:
             f.draw_image(tries)
 
     if tries == 10:
-        print("You lose, the word was " + WORD + ". Better luck next time!") 
+        print("You lose, the word was " + WORD + ". Better luck next time!")
+    
+    elif "*" not in temp_word:
+        print("Congratulations " + name + ", you guessed all characters!")
+
     answer = str(input("Play again? (y/n)\n> "))
     playgame = answer.lower() == "y"
 
