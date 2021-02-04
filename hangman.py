@@ -26,7 +26,7 @@ while playgame:
         
 
         if (guess == WORD):
-            print("Congratiolations, " + name + " you guessed the correct word in " + str(tries) + "tries!!")
+            print("Congratiulations, " + name + " you guessed the correct word in " + str(tries) + "tries!!")
           
 
         elif guess in WORD:
