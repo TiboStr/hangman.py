@@ -15,10 +15,7 @@ while playgame:
                 + str(len(WORD)) + " characters. GLHF!")
 
 
-    print("woord is " + WORD + " met lengte " + str(len(WORD)))
-    print(str(len(WORD)))
-
-    while "*" in temp_word and guess != WORD:
+    while "*" in temp_word and guess != WORD and tries < 10:
         guess=""
         while len(guess) != len(WORD) and len(guess) != 1 or guess in guessed_chars:
             guess = (str(input("Guess a character or try to guess the " + str(len(WORD)) + " letter word. (These are the characters that you have already tried : " + str(guessed_chars) + ")\n> ")))
@@ -39,7 +36,8 @@ while playgame:
             tries+=1
             f.draw_image(tries)
 
-        
+    if tries == 10:
+        print("You lose, the word was " + WORD + ". Better luck next time!") 
     answer = str(input("Play again? (y/n)\n> "))
     playgame = answer.lower() == "y"
 
